@@ -13,22 +13,22 @@ int main(){
     
     // Declaring variables
     bool completed = false;
-    int time_quantum = 5, tracking_counter = 0;
+    int time_quantum = 50, tracking_counter = 0;
     int burst_time, arrival_time, waiting_time, turnaround_time;
 
     //Arrays to store different values
-    int arrival_array_asc[100] = {0,3,4,8};
+    int arrival_array_asc[100000] = {0,10,20,30,40,50};
 
     // Ascending and Descending order dummy data
-    int burst_array_asc[] = {6,7,8,9};
+    int burst_array_asc[] = {10,20,30,40,50,60};
 
     // To find the number of items in the array
     int input_arraySize = sizeof(burst_array_asc)/ sizeof(burst_array_asc[0]);
 
     // Copy arrival array
-    int copy_arrival_array[100];
-    int copy_burst_array[100];
-    int process_ids[100];
+    int copy_arrival_array[100000];
+    int copy_burst_array[100000];
+    int process_ids[100000];
 
     for(int i = 0; i < input_arraySize; i++) {
       copy_arrival_array[i] = arrival_array_asc[i];
@@ -39,7 +39,7 @@ int main(){
         int count = 0;
         int num_of_process_pending = 0;
         int dynamic_array_length = 0;
-        int exceed[1000];
+        int exceed[100000];
     
 
         for(int i= 0;i<input_arraySize + dynamic_array_length; i++){
@@ -93,9 +93,7 @@ int main(){
                 print_output(turnaround, waiting,  process_ids[i]);
               }
             }
-
-
-              }
+           }
 }
 
 int find_turnaround(int arrival_time, int completion){
