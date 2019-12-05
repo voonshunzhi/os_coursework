@@ -6,13 +6,10 @@
 int find_turnaround(int arrival_time, int completion);
 int find_waiting_time(int turnaround, int burst_time);
 void print_output(int turnaround, int waiting_time, int process);
-bool check_completion(int remaining_burst_array[], int size);
-bool check_arrival(int arrival_array[], int current_time, int i, int size);
 
 int main(){
     
     // Declaring variables
-    bool completed = false;
     int time_quantum = 5, tracking_counter = 0;
     int burst_time, arrival_time, waiting_time, turnaround_time;
 
@@ -114,4 +111,3 @@ void print_output(int turnaround, int waiting_time, int process){
     printf("Process %d\n", process);
     printf("Turnaround time is: %d\nWaiting time is: %d\n\n", turnaround, waiting_time); 
 }
-
